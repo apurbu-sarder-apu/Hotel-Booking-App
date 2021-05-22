@@ -1,9 +1,18 @@
 import React from 'react'
+import Hero from '../components/Hero';
+import Services from '../components/Services';
 
-export default function ZabeerHome() {
+
+export default function Home() {
     return (
-        <div>
-            <h1>Zabeer Hotel International</h1>
-        </div>
-    )
+    <>
+    <Hero >
+
+    </Hero>
+    <Services />
+    </>
+    );
 }
+
+
+

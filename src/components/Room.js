@@ -1,8 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Card, CardBody } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import defaultImg from '../images/room-1.jpeg';
 import PropTypes from 'prop-types';
-
+import Booking from './hotels/Booking';
 
 export default function Room({ room }) {
     const { name, slug, images, price } = room;
@@ -16,8 +17,16 @@ export default function Room({ room }) {
                 <div className="price-top">
                     <h6>${price}</h6>
                     <p>per night</p>
-                </div>
 
+                </div>
+                    <div className="bg-light book-hotel text-white mb-5">
+                            <Card style={{marginTop:"10px"}}>
+                                <CardBody style={{textAlign: "left"}}>
+                                    <Booking />
+                                </CardBody>
+                            </Card>
+                            
+                        </div>
                 <Link to={`/rooms/${slug}`} className="btn-primary room-link">Features</Link>
 
 
